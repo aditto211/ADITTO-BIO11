@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orjun — Personal Bio</title>
+  <meta name="description" content="Orjun — Friend's personal bio website" />
+  <style>
+    :root{
+      --bg1: #ff9a9e;
+      --bg2: #fad0c4;
+      --acc1: #7ee8fa;
+      --acc2: #80ff72;
+      --glass: rgba(255,255,255,0.12);
+      --card: rgba(255,255,255,0.18);
+      --text: #102027;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:var(--text);}
+    body{
+      background: linear-gradient(135deg,var(--bg1), var(--bg2));
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      display:flex;align-items:center;justify-content:center;padding:40px;
+    }
+    @keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+    .site{
+      width:100%;max-width:980px;background:linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.55));backdrop-filter: blur(8px);border-radius:18px;box-shadow:0 10px 30px rgba(16,32,39,0.18);overflow:hidden;
+    }
+
+    header{
+      padding:28px 32px;display:flex;align-items:center;gap:20px;background:linear-gradient(90deg, rgba(255,255,255,0.35), rgba(255,255,255,0.12));
+    }
+    .avatar{width:110px;height:110px;border-radius:20px;overflow:hidden;flex:0 0 110px;border:4px solid rgba(255,255,255,0.5);box-shadow:0 6px 18px rgba(0,0,0,0.12);}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .hdr-text{flex:1}
+    h1{margin:0;font-size:28px;letter-spacing:0.4px}
+    p.lead{margin:6px 0 0;font-size:14px;opacity:0.88}
+
+    .nav-chips{display:flex;gap:8px;margin-left:auto}
+    .chip{padding:8px 12px;border-radius:999px;background:var(--card);font-size:13px;border:1px solid rgba(255,255,255,0.35);cursor:pointer}
+
+    main{display:grid;grid-template-columns:360px 1fr;gap:20px;padding:28px}
+    @media (max-width:880px){main{grid-template-columns:1fr;padding:18px}header{flex-wrap:wrap}.avatar{margin:auto}}
+
+    /* Left column */
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.55));padding:18px;border-radius:12px}
+    .name{font-size:20px;font-weight:600}
+    .role{font-size:13px;margin-top:6px;color:#334155}
+    .badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .badge{background:linear-gradient(90deg,var(--acc1),var(--acc2));padding:8px 10px;border-radius:10px;color:#033; font-weight:600;font-size:12px}
+    .stats{display:flex;gap:10px;margin-top:16px}
+    .stat{flex:1;background:var(--glass);padding:10px;border-radius:10px;text-align:center}
+    .stat strong{display:block;font-size:18px}
+
+    /* Right column */
+    .card{background:transparent;padding:16px;border-radius:12px}
+    .section{margin-bottom:18px}
+    .section h3{margin:0 0 8px;font-size:16px}
+    .bio{line-height:1.5}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 10px;border-radius:999px;background:linear-gradient(90deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));border:1px solid rgba(0,0,0,0.06)}
+
+    .socials{display:flex;gap:10px}
+    .socials a{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:var(--card);text-decoration:none;color:var(--text);font-weight:600}
+
+    footer{padding:18px;background:linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.05));text-align:center;font-size:13px}
+
+    /* small animated accent */
+    .sparkle{height:10px;width:10px;border-radius:50%;box-shadow:0 0 18px rgba(255,255,255,0.9);opacity:0.9;display:inline-block;transform:translateY(0);animation: float 3s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+
+    /* Buttons */
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#ffd36e,#ff8fab);color:#06202a;font-weight:700;text-decoration:none}
+
+    /* tiny responsive tweaks */
+    @media (max-width:480px){h1{font-size:20px}.avatar{width:90px;height:90px}}
+  </style>
+</head>
+<body>
+  <!--
+    Instructions: Save this file as `index.html` and open in a browser.
+    Replace the image source in the <img> inside .avatar with Orjun's photo.
+    Update the text content below (name, bio, stats, socials) to reflect Orjun.
+    Comments are in English; UI labels are kept short and mix Bangla & English.
+  -->
+
+  <div class="site">
+    <header>
+      <div class="avatar" title="Replace with Orjun's photo">
+        <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b6?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Orjun photo">
+      </div>
+      <div class="hdr-text">
+        <h1>Orjun Chowdhory <span style="font-size:14px;opacity:0.7">(Friend's Bio)</span></h1>
+        <p class="lead">Footballer • Team Player • Dreamer — "Khela cholbe, manush thakbe"</p>
+        <div style="margin-top:10px;display:flex;gap:8px;align-items:center;">
+          <div class="sparkle" style="background:linear-gradient(90deg,var(--acc1),var(--acc2))"></div>
+          <div style="font-size:13px;opacity:0.85">From: Dhaka · Position: Midfielder / Winger</div>
+        </div>
+      </div>
+      <div class="nav-chips">
+        <div class="chip">Bio</div>
+        <div class="chip">Stats</div>
+        <div class="chip">Gallery</div>
+      </div>
+    </header>
+
+    <main>
+      <aside>
+        <div class="profile-card">
+          <div class="name">Orjun Chowdhory</div>
+          <div class="role">Footballer • Class of 2004</div>
+
+          <div class="badges" aria-hidden>
+            <div class="badge">Team Player</div>
+            <div class="badge">Top Scorer 2023</div>
+            <div class="badge">Captain</div>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><strong>24</strong><span style="font-size:12px">Goals</span></div>
+            <div class="stat"><strong>64</strong><span style="font-size:12px">Matches</span></div>
+            <div class="stat"><strong>8</strong><span style="font-size:12px">Assists</span></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="btn" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="profile-card">
+          <h4 style="margin:0 0 8px">Quick Facts</h4>
+          <p style="margin:0;font-size:14px;opacity:0.9">Age: 20 — Preferred foot: Right — Club: Your Club Name</p>
+        </div>
+      </aside>
+
+      <section>
+        <div class="card">
+          <div class="section">
+            <h3>Biography / জীবনবৃত্তান্ত</h3>
+            <p class="bio">Orjun is a passionate footballer from Dhaka who loves attacking play and creating chances. He trains daily, enjoys tactics and is known among friends for his work-rate and smile. Replace this paragraph with Orjun's real bio — achievements, schools, clubs, and a short personal message in Bangla if you'd like.</p>
+          </div>
+
+          <div class="section">
+            <h3>Skills</h3>
+            <div class="skills">
+              <div class="skill">Dribbling</div>
+              <div class="skill">Crossing</div>
+              <div class="skill">Stamina</div>
+              <div class="skill">Teamwork</div>
+              <div class="skill">Set Pieces</div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3>Recent Highlights</h3>
+            <ul>
+              <li>Scored winning goal in Inter-College Final (2024)</li>
+              <li>Selected for City Youth Squad (2023)</li>
+              <li>Captain of neighborhood team (2022 — present)</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h3>Gallery</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="kick" style="width:120px;height:80px;object-fit:cover;border-radius:8px">
+              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="team" style="width:120px;height:80px;object-fit:cover;border-radius:8px">
+              <img src="https://images.unsplash.com/photo-1540202404-0b0f5b8602f0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="match" style="width:120px;height:80px;object-fit:cover;border-radius:8px">
+            </div>
+          </div>
+
+          <div class="section" id="contact">
+            <h3>Contact</h3>
+            <p style="margin:0 0 8px">Want to get in touch? Email: <strong>orjun@example.com</strong> — Phone: <strong>+8801XXXXXXXXX</strong></p>
+            <div class="socials">
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">WhatsApp</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>Made with ❤️ for Orjun — Edit the file to personalize. Save as <code>index.html</code> and open in any browser.</div>
+    </footer>
+  </div>
+
+</body>
+</html>
